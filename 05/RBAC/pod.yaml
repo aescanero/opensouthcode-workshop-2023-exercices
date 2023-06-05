@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  namespace: demo
+spec:
+  serviceAccountName: demo
+  containers:
+  - name: demo-container
+    image: bitnami/kubectl
+    command: ["/bin/sh", "-c", "kubectl -n demo get events"]
