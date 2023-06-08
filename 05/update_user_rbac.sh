@@ -8,5 +8,5 @@ sudo kubectl create role microservices_admin \
   --namespace=microservices
 sudo kubectl create rolebinding microservices_admin \
   --role=microservices_admin \
-  --user=$username \
+  --user="$username@workshop" \
   --namespace=microservices
